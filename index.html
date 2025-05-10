@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTapestry | Your Name's Portfolio</title>
+    <meta name="description" content="TechTapestry - A showcase of computer science projects and skills">
+    
+    <!-- Meta Tags for Social Media -->
+    <meta property="og:title" content="TechTapestry | Your Portfolio">
+    <meta property="og:description" content="Explore my diverse collection of computer science projects and skills">
+    <meta property="og:image" content="./assets/meta-image.jpg">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__logo">TechTapestry</div>
+        <div class="nav__toggle" id="navToggle">
+            <span class="nav__icon"></span>
+        </div>
+        <ul class="nav__menu">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__title">Welcome to My<br><span class="highlight">TechTapestry</span></h1>
+                <p class="header__subtitle">A cosmic collection of my computer science journey</p>
+                <div class="header__buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="space-particles" id="particles"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section__title">About Me</h2>
+            <div class="about__content">
+                <div class="about__image">
+                    <!-- Replace with your image path -->
+                    <img src="./assets/profile.jpg" alt="Your Name">
+                </div>
+                <div class="about__text">
+                    <p>Hello! I'm Amaka, a computer science senior with a passion for using technology to improve lives. I love uncovering how systems work, solving real-world problems, and continuously exploring emerging fields in tech.</p>
+                    
+                    <p>I've always been drawn to figuring out how things work and finding ways to make them better. That mindset led me to computer science, where I’ve been able to explore everything from software development to cybersecurity and data analysis. As I prepare to graduate in December 2025, I’m excited to contribute to teams that are building thoughtful, impactful solutions—whether that’s in cybersecurity, systems, or tech-driven research and analysis.</p>
+
+                    
+                    <div class="about__buttons">
+                        <a href="./assets/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                        <a href="https://github.com/yourusername" class="btn btn-secondary" target="_blank">GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section__title">Featured Projects</h2>
+            <div class="projects__grid">
+                <!-- Project 1 - p5.js Interactive Project -->
+                <div class="project__card project__card--featured">
+                    <div class="project__iframe">
+                        <iframe
+                          src="https://editor.p5js.org/odidikaa/full/7j6Dh7x4b"
+                          style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; height: 350px;"
+                          allowfullscreen="allowfullscreen"
+                          webkitallowfullscreen="webkitallowfullscreen"
+                          mozallowfullscreen="mozallowfullscreen"
+                          allow="geolocation *; microphone *; camera *; midi *; encrypted-media *; autoplay *; clipboard-write *; display-capture *"
+                          loading="lazy"
+                        ></iframe>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Modular Interactive Story UI with p5.js</h3>
+                        <p class="project__description">An interactive, panel-based navigation system built with p5.js and JavaScript to tell a personal narrative through modular UI components. The project showcases user state tracking, animated transitions, and intuitive hover interactions. Designed to explore identity and storytelling through code, it emphasizes both creative expression and technical implementation. I developed the full front-end system, from UX planning in Figma to final deployment, focusing on modular class architecture and responsive design elements.</p>
+                        <div class="project__tags">
+                            <span class="tag">p5.js</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Creative Coding</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="https://github.com/Caodidika/TechTapestry" class="project__link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://editor.p5js.org/odidikaa/full/7j6Dh7x4b" class="project__link" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project__card">
+                    <div class="project__image">
+                        <img src="./assets/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Project Name 2</h3>
+                        <p class="project__description">Brief description of the project and technologies used. Explain the problem it solves and your role in developing it.</p>
+                        <div class="project__tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="#" class="project__link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project__link" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section__title">Technical Skills</h2>
+            <div class="skills__content">
+                <div class="skills__category">
+                    <h3 class="category__title">Languages</h3>
+                    <div class="skills__items">
+                        <div class="skill__item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill__item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill__item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <!-- Add more skills as needed -->
+                    </div>
+                </div>
+                
+                <div class="skills__category">
+                    <h3 class="category__title">Frameworks & Libraries</h3>
+                    <div class="skills__items">
+                        <div class="skill__item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill__item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <!-- Add more skills as needed -->
+                    </div>
+                </div>
+                
+                <div class="skills__category">
+                    <h3 class="category__title">Tools & Platforms</h3>
+                    <div class="skills__items">
+                        <div class="skill__item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill__item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <!-- Add more skills as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section__title">Get In Touch</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
+                    </div>
+                </div>
+                <div class="contact__form">
+                    <form id="contactForm">
+                        <div class="form__group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2025 TechTapestry - Crafted by [Your Name]</p>
+                <div class="footer__social">
+                    <a href="#" class="social__link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social__link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
+                    <!-- Add more social links as needed -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
