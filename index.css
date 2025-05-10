@@ -275,6 +275,26 @@ img {
     box-shadow: 0 20px 40px rgba(230, 43, 74, 0.1);
 }
 
+/* ===== PROJECTS SECTION ===== */
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-md);
+}
+
+.project__card {
+    background-color: var(--color-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border);
+}
+
+.project__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(230, 43, 74, 0.1);
+}
+
 .project__image, .project__iframe {
     height: 200px;
     overflow: hidden;
@@ -286,6 +306,12 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Specific styles for Expo Snack embed */
+.project__iframe--expo {
+    height: 505px;
+    background-color: #212121;
 }
 
 .project__iframe iframe {
@@ -305,11 +331,62 @@ img {
     transform: scale(1.1);
 }
 
-/* For featured projects (like your p5.js project) */
+.project__content {
+    padding: var(--space-md);
+}
+
+.project__title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+}
+
+.project__description {
+    margin-bottom: var(--space-sm);
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+}
+
+.tag {
+    background-color: rgba(230, 43, 74, 0.2);
+    color: var(--color-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project__links {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.project__link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.project__link i {
+    font-size: 1rem;
+}
+
+/* For featured projects (like your p5.js and Expo projects) */
 .project__card--featured {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr;
+    margin-bottom: var(--space-md);
 }
 
 @media screen and (min-width: 768px) {
@@ -319,10 +396,14 @@ img {
     
     .project__card--featured .project__iframe {
         height: 100%;
+        min-height: 350px;
     }
     
     .project__card--featured .project__content {
         padding: var(--space-md) var(--space-lg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
