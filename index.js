@@ -40,9 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Normally, you would handle form submission with AJAX here
             // For GitHub Pages, you might want to use a service like Formspree
-            alert('Thank you for your message! This is a demo. In a real portfolio, this would send an email.');
+            alert('Thank you for your message! This form functionality requires backend integration. Please connect a form service like Formspree or Netlify Forms to make it work.');
             contactForm.reset();
         });
     }
@@ -72,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
             projectObserver.observe(card);
         });
     }
+
+    // Ensure iframes are properly loaded
+    adjustIframeHeights();
 });
 
 // Initialize particles.js
@@ -167,3 +169,28 @@ function initParticles() {
         });
     }
 }
+
+// Function to adjust iframe heights
+function adjustIframeHeights() {
+    // Special handling for Expo Snack
+    const expoContainers = document.querySelectorAll('.project__iframe--expo div');
+    expoContainers.forEach(container => {
+        if (container.hasAttribute('data-snack-id')) {
+            // Ensure inline styles don't override CSS
+            container.style.removeProperty('height');
+            // Set !important for width and height
+            container.setAttribute('style', 'width: 100% !important; height: 100% !important; overflow: hidden; background: #212121; border-radius: 8px;');
+        }
+    });
+    
+    // Handle p5.js iframes
+    const p5Iframes = document.querySelectorAll('.project__iframe--p5js iframe');
+    p5Iframes.forEach(iframe => {
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+    });
+}
+
+// Add a resize event listener to adjust iframe sizes when window size changes
+window.addEventListener('resize', adjustIframeHeights);
